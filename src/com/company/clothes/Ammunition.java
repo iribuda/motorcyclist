@@ -4,12 +4,22 @@ import java.util.Comparator;
 
 public abstract class Ammunition {
     String name;
-    double price, weight;
+    Double price, weight;
+    int id;
 
-    public Ammunition(String name, double price, double weight) {
+    public Ammunition(int id, String name, double price, double weight) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.weight = weight;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -20,7 +30,7 @@ public abstract class Ammunition {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -28,7 +38,7 @@ public abstract class Ammunition {
         this.price = price;
     }
 
-    public double getWeight() {
+    public Double getWeight() {
         return weight;
     }
 

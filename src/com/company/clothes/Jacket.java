@@ -2,7 +2,7 @@ package com.company.clothes;
 
 public class Jacket extends Ammunition{
 
-    public Jacket(String name, double price, double weight) {
-        super(name, price, weight);
+    public Jacket(int id, String name, double price, double weight) {
+        super(id, name, price, weight);
     }
 }
