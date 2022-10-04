@@ -3,10 +3,7 @@ package com.company.person;
 import com.company.clothes.Ammunition;
 import com.company.dressing.Wardrobe;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Set;
+import java.util.*;
 
 public abstract class Human {
     private String name, phoneNumber, gender;
@@ -20,6 +17,7 @@ public abstract class Human {
         this.gender = gender;
         this.age = age;
         setWardrobe();
+        ammunitionOn = new HashSet<>();
     }
 
     public String getName() {

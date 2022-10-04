@@ -39,7 +39,7 @@ public class ShoppingCart {
                 cost += a.getPrice();
             }
         }
-        System.out.printf("Overall cost: %.2f", cost);
+        System.out.printf("Overall cost: %.2f$", cost);
         return cost;
     }
 

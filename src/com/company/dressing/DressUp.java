@@ -5,6 +5,7 @@ import com.company.person.Human;
 import com.company.shopping.AmmunitionFilter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class DressUp {
 
@@ -17,6 +18,15 @@ public class DressUp {
     public Human putOn(Ammunition ammunition){
         human.setAmmunitionOn(ammunition);
         return human;
+    }
+
+    public ArrayList<Ammunition> showAmmunitionOn(){
+        ArrayList<Ammunition> ammunitions = new ArrayList<>();
+        human.getAmmunitionOn().removeAll(Collections.singleton(null));
+        for(Ammunition a: human.getAmmunitionOn()){
+            ammunitions.add(a);
+        }
+        return ammunitions;
     }
 
     public ArrayList<Ammunition> sortAmmunition(AmmunitionFilter ammunitionFilter){

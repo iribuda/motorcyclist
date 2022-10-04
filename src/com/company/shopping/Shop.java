@@ -3,6 +3,7 @@ package com.company.shopping;
 import com.company.clothes.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Shop {
     ArrayList<Ammunition> ammunitions = new ArrayList<>();
@@ -56,6 +57,7 @@ public class Shop {
                 filteredAmmunition.add(ammunition);
             }
         }
+        filteredAmmunition.removeAll(Collections.singleton(null));
         return filteredAmmunition;
     }
 
@@ -68,6 +70,7 @@ public class Shop {
                 System.out.println(a.getName() + " " + a.getPrice());
             }
         }
+        ammunitionsInRange.removeAll(Collections.singleton(null));
         return ammunitionsInRange;
     }
 
